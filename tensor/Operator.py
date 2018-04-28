@@ -139,7 +139,7 @@ class Conv2D(Operator):
 			weights.diff += np.dot(self.col_image[i].T, col_eta[i]).reshape(self.weights.shape)
 		bias.diff += np.sum(col_eta, axis=(0, 1))
 
-		if self.stride != 0:
+		if self.stride != 1:
 			expand_H = input.shape[1] + 2 * self.padding - self.ksize + 1 
 			expand_W = input.shape[2] + 2 * self.padding - self.ksize + 1 
 			expand_eta = np.zeros((self.batchsize, expand_H, expand_W, self.output_num))
