@@ -3,7 +3,7 @@ Writing some cnn layers ans the computation graph in python
 
 This repository is mainly based on https://github.com/wuziheng/CNN-Numpy
 
-There are some problems in https://github.com/wuziheng/CNN-Numpy. When the stride != 0, the forward and backward of the convolution will error. When the kernel size != the stride, the error will happen on pooling. So  have improved the algorithm of the convolution and pool. 
+There are some problems in https://github.com/wuziheng/CNN-Numpy. When the stride != 1, the forward and backward of the convolution will error. When the kernel size != the stride, the error will happen on pooling. So  have improved the algorithm of the convolution and pool. 
 
 ## convolution:<br>
 ### forward(x):<br>
